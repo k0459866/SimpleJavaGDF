@@ -3,19 +3,16 @@ package com.jamescho.game.main;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by cortman on 2/14/17.
- */
 public class GameMain {
     private static final String GAME_TITLE = "Java Game Development Framework";
-    public static final int GAME_WIDTH= 800;
-    public static final int GAME_HEIGHT = 450;
-    public static Game sGame;
+    private static final int GAME_WIDTH= 800;
+    private static final int GAME_HEIGHT = 450;
+//    public static Game sGame;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame(GAME_TITLE);
         frame.setLayout(new BorderLayout());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(GAME_WIDTH,GAME_HEIGHT);
         frame.setResizable(false);
 
@@ -48,8 +45,11 @@ class CrappyPanel extends JPanel {
         g.setColor(Color.BLUE);
         g.fillRect(0,0,100,100);
 
+        g.setColor(Color.WHITE);
+        g.fillRect(50,50,100,100);
+
         g.setColor(Color.GREEN);
-        g.drawRect(50,50,100,100);
+        g.drawRect(50, 50, 100, 100);
 
         g.setColor(Color.RED);
         g.drawString("Hello World!", 200, 200);
